@@ -22,11 +22,11 @@ title: "Home"
 <section id="about" class="section">
   <div class="about-container">
     <img src="{{ '/assets/images/me.jpeg' | relative_url }}"
-         alt="Mina K"
+         alt="Mina Kebriaee"
          class="profile-pic">
 
     <div class="about-text">
-      <h1>Hello! I'm Mina K</h1>
+      <h1>Hello! I'm Mina Kebriaee</h1>
       <p>AI, Data, and Cloud Projects</p>
       <p>I build practical projects in data, AI, analytics, and cloud computing, with a focus on solving real-world problems and communicating insights clearly.</p>
       <p><strong>Core skills:</strong> Python · SQL · Machine Learning · Data Analysis · AWS · Pandas · Scikit-learn · Tableau</p>
