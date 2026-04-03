@@ -1,5 +1,5 @@
-title: "Michael Shoemaker — Data Engineering"
-description: "Production-like data engineering builds, explained clearly."
+title: "Mina Kebriaee — AI, Data & Cloud Projects"
+description: "A portfolio of data, AI, and cloud projects with a focus on practical problem-solving and real-world applications."
 baseurl: ""
 url: ""
 markdown: kramdown
@@ -9,9 +9,9 @@ defaults:
   - scope: { path: "" }
     values:
       layout: default
-author: "Michael Shoemaker"
-github_username: "MichaelShoemaker"
-youtube_channel: "@dataslinger6379"
-medium_username: "dataslinger"
+author: "Mina Kebriaee"
+github_username: "NeuralByteJourney"
+linkedin_username: "mina-kebriae"
+email: "mkebriae@uwaterloo.ca"
 exclude:
   - "README.md"
