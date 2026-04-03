@@ -8,35 +8,35 @@ title: "Home"
   .carousel-track {
     display: flex;
     gap: 1rem;
-    flex-wrap: nowrap;        /* keep in one row */
+    flex-wrap: nowrap;
     overflow-x: auto;
     scroll-behavior: smooth;
     padding-bottom: .25rem;
-    -ms-overflow-style: none; /* IE/Edge */
-    scrollbar-width: none;    /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
-  .carousel-track::-webkit-scrollbar { display: none; } /* WebKit */
-  .carousel .card { flex: 0 0 300px; } /* slide width */
+  .carousel-track::-webkit-scrollbar { display: none; }
+  .carousel .card { flex: 0 0 300px; }
 </style>
 
 <section id="about" class="section">
   <div class="about-container">
     <img src="{{ '/assets/images/me.jpeg' | relative_url }}"
-         alt="Michael Shoemaker"
+         alt="Mina K"
          class="profile-pic">
 
     <div class="about-text">
-      <h1>Hello World! I'm Michael Shoemaker</h1>
-      <p>Senior Data Analyst | Teacher | Content Creator | .5x Programmer</p>
-      <p>I build practical, production-like data engineering systems — orchestration, storage, transformations, serving, and observability — then explain the decisions behind them.</p>
-      <p><strong>Core skills:</strong> Python · SQL · Linux · Airflow · Spark · BigQuery · Docker · GCP</p>
+      <h1>Hello! I'm Mina K</h1>
+      <p>AI, Data, and Cloud Projects</p>
+      <p>I build practical projects in data, AI, analytics, and cloud computing, with a focus on solving real-world problems and communicating insights clearly.</p>
+      <p><strong>Core skills:</strong> Python · SQL · Machine Learning · Data Analysis · AWS · Pandas · Scikit-learn · Tableau</p>
 
       <p class="social-links">
-        <a href="https://www.linkedin.com/in/michaelshoemaker1" target="_blank" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank" aria-label="LinkedIn">
           <i class="fa-brands fa-linkedin"></i>
         </a>
-        <a href="https://www.youtube.com/@dataslinger6379" target="_blank" aria-label="YouTube">
-          <i class="fa-brands fa-youtube"></i>
+        <a href="https://github.com/{{ site.github_username }}" target="_blank" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
         </a>
       </p>
     </div>
@@ -100,117 +100,6 @@ title: "Home"
   {% endif %}
 </section>
 
-<!-- ===================== Videos ===================== -->
-<section id="videos" class="section">
-  <div class="section-header">
-    <h2>🎥 Videos</h2>
-    <a class="view-all" href="https://youtube.com/{{ site.youtube_channel }}" target="_blank" rel="noopener">Channel →</a>
-  </div>
-
-  {% assign videos_count = site.data.videos | size %}
-  {% if videos_count > 4 %}
-    <div class="carousel">
-      <button class="scroll-btn left" data-target="#videos-track" aria-label="Scroll videos left">‹</button>
-      <div id="videos-track" class="carousel-track" role="region" aria-label="Videos list">
-        {% for item in site.data.videos %}
-        <article class="card">
-          <a class="thumb" href="{{ item.link }}" target="_blank" rel="noopener" aria-label="Open video">
-            <img src="{{ item.image | default: '/assets/images/placeholder_video.jpg' | relative_url }}"
-                 alt="{{ item.title | escape }} thumbnail"
-                 loading="lazy"
-                 {% if item.preview_gif %}data-preview="{{ item.preview_gif | relative_url }}"{% endif %}>
-          </a>
-          <div class="card-body">
-            <h3 class="card-title"><a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a></h3>
-            {% if item.note %}<p class="card-text">{{ item.note }}</p>{% endif %}
-            <div class="card-actions">
-              {% if item.screenshot %}<a href="#" class="btn ghost" data-lightbox-src="{{ item.screenshot | relative_url }}">Preview</a>{% endif %}
-              <a class="btn" href="{{ item.link }}" target="_blank" rel="noopener">Watch</a>
-            </div>
-          </div>
-        </article>
-        {% endfor %}
-      </div>
-      <button class="scroll-btn right" data-target="#videos-track" aria-label="Scroll videos right">›</button>
-    </div>
-  {% else %}
-    <div class="gallery">
-      {% for item in site.data.videos %}
-      <article class="card">
-        <a class="thumb" href="{{ item.link }}" target="_blank" rel="noopener" aria-label="Open video">
-          <img src="{{ item.image | default: '/assets/images/placeholder_video.jpg' | relative_url }}"
-               alt="{{ item.title | escape }} thumbnail" loading="lazy">
-        </a>
-        <div class="card-body">
-          <h3 class="card-title"><a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a></h3>
-          {% if item.note %}<p class="card-text">{{ item.note }}</p>{% endif %}
-          <div class="card-actions">
-            {% if item.screenshot %}<a href="#" class="btn ghost" data-lightbox-src="{{ item.screenshot | relative_url }}">Preview</a>{% endif %}
-            <a class="btn" href="{{ item.link }}" target="_blank" rel="noopener">Watch</a>
-          </div>
-        </div>
-      </article>
-      {% endfor %}
-    </div>
-  {% endif %}
-</section>
-
-<!-- ===================== Articles ===================== -->
-<section id="articles" class="section">
-  <div class="section-header">
-    <h2>✍️ Articles</h2>
-    <a class="view-all" href="https://medium.com/@{{ site.medium_username }}" target="_blank" rel="noopener">Medium →</a>
-  </div>
-
-  {% assign articles_count = site.data.articles | size %}
-  {% if articles_count > 4 %}
-    <div class="carousel">
-      <button class="scroll-btn left" data-target="#articles-track" aria-label="Scroll articles left">‹</button>
-      <div id="articles-track" class="carousel-track" role="region" aria-label="Articles list">
-        {% for item in site.data.articles %}
-        <article class="card">
-          <a class="thumb" href="{{ item.link }}" target="_blank" rel="noopener" aria-label="Open article">
-            <img src="{{ item.image | default: '/assets/images/placeholder_article.jpg' | relative_url }}"
-                 alt="{{ item.title | escape }} thumbnail"
-                 loading="lazy"
-                 {% if item.preview_gif %}data-preview="{{ item.preview_gif | relative_url }}"{% endif %}>
-          </a>
-          <div class="card-body">
-            <h3 class="card-title"><a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a></h3>
-            {% if item.subtitle %}<p class="card-text">{{ item.subtitle }}</p>{% endif %}
-            <div class="card-actions">
-              {% if item.screenshot %}<a href="#" class="btn ghost" data-lightbox-src="{{ item.screenshot | relative_url }}">Preview</a>{% endif %}
-              <a class="btn" href="{{ item.link }}" target="_blank" rel="noopener">Read</a>
-            </div>
-          </div>
-        </article>
-        {% endfor %}
-      </div>
-      <button class="scroll-btn right" data-target="#articles-track" aria-label="Scroll articles right">›</button>
-    </div>
-  {% else %}
-    <div class="gallery">
-      {% for item in site.data.articles %}
-      <article class="card">
-        <a class="thumb" href="{{ item.link }}" target="_blank" rel="noopener" aria-label="Open article">
-          <img src="{{ item.image | default: '/assets/images/placeholder_article.jpg' | relative_url }}"
-               alt="{{ item.title | escape }} thumbnail" loading="lazy">
-        </a>
-        <div class="card-body">
-          <h3 class="card-title"><a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.title }}</a></h3>
-          {% if item.subtitle %}<p class="card-text">{{ item.subtitle }}</p>{% endif %}
-          <div class="card-actions">
-            {% if item.screenshot %}<a href="#" class="btn ghost" data-lightbox-src="{{ item.screenshot | relative_url }}">Preview</a>{% endif %}
-            <a class="btn" href="{{ item.link }}" target="_blank" rel="noopener">Read</a>
-          </div>
-        </div>
-      </article>
-      {% endfor %}
-    </div>
-  {% endif %}
-</section>
-
-<!-- Tiny helper script for arrow buttons -->
 <script>
 (function () {
   function init(btn) {
