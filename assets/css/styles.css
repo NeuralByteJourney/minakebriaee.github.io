@@ -89,11 +89,19 @@ a { color: var(--accent); text-decoration: none; }
   flex-direction: column;
 }
 
-.thumb { display:block; position: relative; }
+.thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 180px;
+  padding: 0.5rem;
+  background: #0b1220;
+}
 
 .thumb img {
   width: 100%;
-  height: 180px;
+  height: 100%;
   object-fit: contain;
   display: block;
   background: #0b1220;
