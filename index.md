@@ -27,9 +27,9 @@ title: "Home"
 
     <div class="about-text">
       <h1>Hello! I'm Mina Kebriaee</h1>
-      <p>AI, Data, and Cloud Projects</p>
+      <p>Data Professional Focused on AI and Analytics</p>
       <p>I build practical projects in data, AI, analytics, and cloud computing, with a focus on solving real-world problems and communicating insights clearly.</p>
-      <p><strong>Core skills:</strong> Python · SQL · Machine Learning · Data Analysis · AWS · Pandas · Scikit-learn · Tableau</p>
+      <p><strong>Core skills:</strong> Python · Pandas · Machine Learning · Data Analysis · AWS · SQL · Scikit-learn · Tableau</p>
 
       <p class="social-links">
         <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank" aria-label="LinkedIn">
