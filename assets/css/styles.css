@@ -94,8 +94,8 @@ a { color: var(--accent); text-decoration: none; }
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 180px;
-  padding: 0.5rem;
+  height: 240px;
+  padding: 0;
   background: #0b1220;
 }
 
