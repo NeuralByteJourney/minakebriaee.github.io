@@ -1,5 +1,5 @@
 - title: "HEMS with Reinforcement Learning"
-  link: "YOUR_GITHUB_LINK"
+  link: "https://github.com/NeuralByteJourney/hems-reinforcement-learning/"
   description: "Built a SAC-based control system for a solar-powered home with EV and battery integration, reducing electricity cost by 15.12% versus an MPC baseline under Ontario TOU pricing."
   stack: "Python · Pandas · SAC · SHAP · Energy Optimization"
   image: "/assets/images/hems_architecture.png"
